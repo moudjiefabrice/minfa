@@ -1,0 +1,64 @@
+<!--Main Navigation-->
+<header *ngIf="authservice.isAuthenticated()">
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed ">
+
+        <a class="logo-wrapper waves-effect">
+            <h1>Votre logo</h1>
+        </a>
+
+        <div class="list-group list-group-flush">
+
+            <a routerLink="minfa/dashboard" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="home" class="mr-3"></mdb-icon>Dashboard
+            </a>
+            <a routerLink="vehicules/vehicul1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="clock" class="mr-3"></mdb-icon>Véhicule en attente de reconditionnement</a>
+
+        </div>
+
+    </div>
+    <!-- Sidebar -->
+
+    <!--Navbar-->
+    <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light white">
+
+        <!-- Navbar brand -->
+        <logo class="ml-3">
+            <a class="navbar-brand" >
+                <strong class="blue-text">MINFA</strong>
+            </a>
+        </logo>
+
+
+                <!-- Collapsible content -->
+                <links class=" pl-2 " style="display: flex; margin-left: 700px ">
+
+
+                    <!-- Search form -->
+                    <ul class="navbar-nav nav-flex-icons ">
+                        <li class="nav-item ">
+                            <div class="dropdown " mdbDropdown >
+                                <button mdbDropdownToggle type="button" mdbBtn color="primary" class="dropdown-toggle waves-light"
+                                        mdbWavesEffect>
+                                   <i class="fa fa-user"></i> fabrice moudjie
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Profil</a>
+                                    <a class="dropdown-item " (click)="logout()">Deconnection</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </links>
+                <!-- Collapsible content -->
+
+
+    </mdb-navbar>
+    <!--/.Navbar-->
+
+</header>
+<!--Main Navigation-->

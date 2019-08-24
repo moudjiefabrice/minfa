@@ -1,0 +1,222 @@
+<!-- Heading -->
+<div class="card mb-4 wow fadeIn">
+
+    <!--Card content-->
+    <div class="card-body d-sm-flex justify-content-between">
+
+        <h4 class="mb-sm-0 pt-3">
+            <a routerLink="/minfa/profil">Véhicule</a>
+            <span>/</span>
+            <span>Dashboard</span>
+        </h4>
+
+        <form class="d-flex md-form justify-content-center my-0">
+            <!-- Default input -->
+            <input type="search" placeholder="recherche" aria-label="Search" class="form-control">
+            <button class="btn btn-primary btn-sm my-0 p" type="submit">
+                <mdb-icon fas icon="search"></mdb-icon>
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-6">
+     <h2><strong>Véhicule Attente de reconditionnement</strong>  </h2>
+    </div>
+    <div class="col-md-6">
+<button class="btn btn-danger float-right">Gestion des titres</button>
+    </div>
+</div>
+
+<form class="text-center" style="color: #757575;">
+
+    <div class="form-row">
+        <div class="col">
+
+            <div class="md-form">
+                <input type="text" id="Immatriculation" class="form-control" mdbInput>
+                <label for="Immatriculation">Immatriculation</label>
+            </div>
+        </div>
+        <div class="col">
+
+            <div class="md-form">
+                <input type="email" id="chassie" class="form-control" mdbInput>
+                <label for="chassie">N° chassie</label>
+            </div>
+        </div>
+        <div class="col">
+
+            <div class="md-form">
+                <input type="email" id="Constructeur" class="form-control" mdbInput>
+                <label for="Constructeur">Ref Constructeur</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+
+            <div class="md-form">
+                <select class="browser-default custom-select" >
+                    <option selected>Marque</option>
+                    <option value="BMW">BMW</option>
+                    <option value="TOYOTA">TOYOTA</option>
+                    <option value="VX">VX</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="col">
+
+            <div class="md-form">
+                <select class="browser-default custom-select" >
+                    <option selected>Modele</option>
+                    <option value="Petit">Petit</option>
+                    <option value="Grand">Grand</option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+
+            <div class="md-form">
+                <input type="date" id="input" class="form-control" mdbInput>
+                <label for="input">Date de traitement (debut)</label>
+            </div>
+        </div>
+    </div>
+
+
+ <div class="row">
+     <div class="col-md-12">
+         <button mdbBtn  class="btn btn-primary waves-effect z-depth-0 float-left" rounded="true"  mdbWavesEffect type="submit">Rechercher</button>
+     </div>
+ </div>
+
+
+
+
+
+
+</form>
+
+<div class="row" style="padding-top: 20px;padding-bottom: 20px" >
+    <div class="col-md-12">
+
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+            <div  >
+                <button  type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                    <i class="fa fa-plus mt-0"></i>
+                </button>
+            </div>
+            <div class="white-text mx-3">Liste </div>
+
+        </div>
+        <div class="table-wrapper table-responsive">
+            <!--Table-->
+            <table class="table table-hover mb-0">
+
+                <!--Table head-->
+                <thead>
+                <tr>
+
+                    <th class="th-lg">
+                        <a (click)="sortBy('immatricule')">Immatricule
+                            <i class="fa fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a (click)="sortBy('chassie')">Chassie
+                            <i class="fa fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a (click)="sortBy('type')">Ref Const
+                            <i class="fa fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a (click)="sortBy('type')">Marque
+                            <i class="fa fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                    <th class="th-lg">
+                        <a (click)="sortBy('type')">Modele
+                            <i class="fa fa-sort ml-1"></i>
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <!--Table head-->
+
+                <!--Table body-->
+                <tbody>
+                <tr >
+                    <td>fcbsxh</td>
+                    <td>dghndefth</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>ggnfcgnj,</td>
+                </tr>  <tr >
+                    <td>fcbsxh</td>
+                    <td>dghndefth</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>ggnfcgnj,</td>
+                </tr>  <tr >
+                    <td>fcbsxh</td>
+                    <td>dghndefth</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>tgnjhrftjktg</td>
+                    <td>ggnfcgnj,</td>
+                </tr>
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
+        </div>
+
+        <hr class="my-0">
+
+        <!--Bottom Table UI-->
+        <div class="d-flex justify-content-between text-black-50">
+
+
+            <!--Pagination -->
+            <nav class="my-4 pt-2">
+                <ul class="pagination pagination-circle pg-purple mb-0"  >
+                    <li class="page-item disabled clearfix d-none d-md-block" >
+                        <a class="page-link" >Premier</a>
+                    </li>
+                    <li >
+                        <a class="page-link" aria-label="Previous" >
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">retour</span>
+                        </a>
+                    </li>
+                    <li class="page-item active" >
+                        <a class="page-link" >1</a>
+                    </li>
+                    <li class="page-item active" >
+                        <a class="page-link" >2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next" >
+
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                    </li>
+                    <li class="page-item clearfix d-none d-md-block">
+                        <a class="page-link" >Dernier</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--/Pagination -->
+
+        </div>
+    </div>
+
+</div>
